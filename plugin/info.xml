@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<c2addon>
+	<!-- One of: plugin, behavior, effect -->
+	<type>plugin</type>
+	
+	<name>Keyboard Emulator</name>	
+	<version>1.0</version>
+	<author>Psychokiller1888</author>
+	<website>https://github.com/Psychokiller1888/C2KeyboardEmulator</website>
+	<documentation>https://github.com/Psychokiller1888/C2KeyboardEmulator</documentation>
+	<description>Allows to emulate keystrokes</description>
+</c2addon>
