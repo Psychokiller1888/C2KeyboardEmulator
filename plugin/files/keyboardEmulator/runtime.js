@@ -90,6 +90,7 @@ cr.plugins_.KeyboardEmulator = function(runtime)
 	// the example action
 	Acts.prototype.doEmulate = function (code) {
 		jQuery.event.trigger({ type : 'keydown', which : code });
+		jQuery.event.trigger({ type : 'keyup', which : code });
 	};
 	
 	// ... other actions here ...
