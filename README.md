@@ -3,5 +3,10 @@ Construct 2 plugin allowing keyboard press events to be emulated
 
 Mainly built for games that want to use both AirConsole and keyboard controls
 
-Usage
- ![Usage: http://puu.sh/s1HCA.png](http://puu.sh/s1HCA.png)
+- Usage
+
+![Usage: http://puu.sh/s1HCA.png](http://puu.sh/s1HCA.png)
+
+- Fake multiplayer
+
+![Usage: http://puu.sh/s1I8U.png](http://puu.sh/s1I8U.png)
