@@ -93,6 +93,12 @@ cr.plugins_.KeyboardEmulator = function(runtime)
 		jQuery.event.trigger({ type : 'keyup', which : code });
 	};
 	
+	Acts.prototype.doEmulateRaw = function (key) {
+		var code = key.charCodeAt(0);
+		jQuery.event.trigger({ type : 'keydown', which : code });
+		jQuery.event.trigger({ type : 'keyup', which : code });
+	}
+	
 	// ... other actions here ...
 	
 	pluginProto.acts = new Acts();

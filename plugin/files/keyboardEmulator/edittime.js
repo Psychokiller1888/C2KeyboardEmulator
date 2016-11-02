@@ -3,7 +3,7 @@
 	return {
 		"name":			"Keyboard Emulator",	// as appears in 'insert object' dialog, can be changed as long as "id" stays the same
 		"id":			"KeyboardEmulator",		// this is used to identify this plugin and is saved to the project; never change it
-		"version":		"1.0",					// (float in x.y format) Plugin version - C2 shows compatibility warnings based on this
+		"version":		"1.1",					// (float in x.y format) Plugin version - C2 shows compatibility warnings based on this
 		"description":	"Allows keystrokes emulation",
 		"author":		"Psychokiller1888",
 		"help url":		"https://github.com/Psychokiller1888/C2KeyboardEmulator",
@@ -72,6 +72,9 @@
 // example
 AddKeybParam("Key", "Key to emulate");
 AddAction(0, af_none, "Emulate", "Emulation", "Emulate {0}", "Emulate a keystroke", "doEmulate");
+
+AddStringParam("Key", "Key to emulate");
+AddAction(1, af_none, "Emulate raw key", "Emulation", "Emulate {0}", "Emulate a keystroke", "doEmulateRaw");
 
 ////////////////////////////////////////
 // Expressions
