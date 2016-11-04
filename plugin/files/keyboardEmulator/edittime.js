@@ -3,7 +3,7 @@
 	return {
 		"name":			"Keyboard Emulator",	// as appears in 'insert object' dialog, can be changed as long as "id" stays the same
 		"id":			"KeyboardEmulator",		// this is used to identify this plugin and is saved to the project; never change it
-		"version":		"1.1",					// (float in x.y format) Plugin version - C2 shows compatibility warnings based on this
+		"version":		"1.2",					// (float in x.y format) Plugin version - C2 shows compatibility warnings based on this
 		"description":	"Allows keystrokes emulation",
 		"author":		"Psychokiller1888",
 		"help url":		"https://github.com/Psychokiller1888/C2KeyboardEmulator",
@@ -71,10 +71,18 @@
 
 // example
 AddKeybParam("Key", "Key to emulate");
-AddAction(0, af_none, "Emulate", "Emulation", "Emulate {0}", "Emulate a keystroke", "doEmulate");
+AddComboParamOption("Key press");
+AddComboParamOption("Key down");
+AddComboParamOption("Key up");
+AddComboParam("Type", "The type of event to emulate", 0);
+AddAction(0, af_none, "Emulate keyboard event", "Emulation", "Emulate a {1} on {0}", "Emulate a keyboard event. Use this one to define the key by using Construct 2 key detector. Be aware that these keys are capital letters!", "doEmulateKeyboardEvent");
 
 AddStringParam("Key", "Key to emulate");
-AddAction(1, af_none, "Emulate raw key", "Emulation", "Emulate {0}", "Emulate a keystroke", "doEmulateRaw");
+AddComboParamOption("Key press");
+AddComboParamOption("Key down");
+AddComboParamOption("Key up");
+AddComboParam("Type", "The type of event to emulate", 0);
+AddAction(1, af_none, "Emulate raw keyboard event", "Emulation", "Emulate a {1} on {0}", "Emulate a keyboard event", "doEmulateRawKeyboardEvent");
 
 ////////////////////////////////////////
 // Expressions
