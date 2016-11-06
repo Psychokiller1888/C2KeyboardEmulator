@@ -89,12 +89,24 @@ cr.plugins_.KeyboardEmulator = function(runtime)
 
 	var events = ['keypress', 'keydown', 'keyup'];
 	Acts.prototype.doEmulateKeyboardEvent = function (code, type) {
-		jQuery.event.trigger({ type : events[type], which : code });
+		if (type === 0) {
+			jQuery.event.trigger({ type : events[1], which : code });	
+			jQuery.event.trigger({ type : events[2], which : code });	
+		}
+		else {
+			jQuery.event.trigger({ type : events[type], which : code });
+		}
 	};
 	
 	Acts.prototype.doEmulateRawKeyboardEvent = function (key, type) {
 		var code = key.charCodeAt(0);
-		jQuery.event.trigger({ type : events[type], which : code });
+		if (type === 0) {
+			jQuery.event.trigger({ type : events[1], which : code });	
+			jQuery.event.trigger({ type : events[2], which : code });	
+		}
+		else {
+			jQuery.event.trigger({ type : events[type], which : code });
+		}
 	}
 	
 	// ... other actions here ...

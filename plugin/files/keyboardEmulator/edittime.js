@@ -3,7 +3,7 @@
 	return {
 		"name":			"Keyboard Emulator",	// as appears in 'insert object' dialog, can be changed as long as "id" stays the same
 		"id":			"KeyboardEmulator",		// this is used to identify this plugin and is saved to the project; never change it
-		"version":		"1.2",					// (float in x.y format) Plugin version - C2 shows compatibility warnings based on this
+		"version":		"1.3",					// (float in x.y format) Plugin version - C2 shows compatibility warnings based on this
 		"description":	"Allows keystrokes emulation",
 		"author":		"Psychokiller1888",
 		"help url":		"https://github.com/Psychokiller1888/C2KeyboardEmulator",
